@@ -1,0 +1,280 @@
+@font-face {
+    font-family: 'hj';
+    src: url('../font/Copyduck.ttf');
+}
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    animation:bg 10s linear infinite;
+}
+
+@keyframes bg {
+    0% {background: #ffc3df;}
+    20% {background: #fffc9f;}
+    40% {background: #a7ffe5;}
+    60% {background: #fcd3ff;}
+    80% {background: #ffc7c3;}
+    100% {background: #ffc3df;}
+  }
+.love {
+    width: 35%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 120px;
+}
+.love:not(.go) {
+    display: none;
+}
+
+
+.love.go .top .one,
+.love.go .top .zero {
+    position: relative;
+    filter: drop-shadow(0px 0px 20px #ff9fac);
+    animation: show 3s ease-out forwards;
+}
+
+.love.go .top .one:before,
+.love.go .top .one:after,
+.love.go .top .zero:before,
+.love.go .top .zero:after {
+    animation: show-color 3s ease-out forwards;
+}
+
+.love.go .top .one:nth-child(1),
+.love.go .top .one:nth-child(1):before,
+.love.go .top .one:nth-child(1):after,
+.love.go .top .zero:nth-child(1),
+.love.go .top .zero:nth-child(1):before,
+.love.go .top .zero:nth-child(1):after {
+    animation-delay: -0.75s;
+}
+
+.love.go .top .one:nth-child(2),
+.love.go .top .one:nth-child(2):before,
+.love.go .top .one:nth-child(2):after,
+.love.go .top .zero:nth-child(2),
+.love.go .top .zero:nth-child(2):before,
+.love.go .top .zero:nth-child(2):after {
+    animation-delay: -0.5s;
+}
+
+.love.go .top .one:nth-child(3),
+.love.go .top .one:nth-child(3):before,
+.love.go .top .one:nth-child(3):after,
+.love.go .top .zero:nth-child(3),
+.love.go .top .zero:nth-child(3):before,
+.love.go .top .zero:nth-child(3):after {
+    animation-delay: -0.25s;
+}
+
+.love.go .top .one:nth-child(4),
+.love.go .top .one:nth-child(4):before,
+.love.go .top .one:nth-child(4):after,
+.love.go .top .zero:nth-child(4),
+.love.go .top .zero:nth-child(4):before,
+.love.go .top .zero:nth-child(4):after {
+    animation-delay: 0s;
+}
+
+.love.go .top .one {
+    z-index: 4;
+    width: 30px;
+    height: 120px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.love.go .top .one:before {
+    position: absolute;
+    left: -20px;
+    width: 20px;
+    height: 25px;
+    background-color: white;
+    content: '';
+}
+
+.love.go .top .zero {
+    transform: rotate(45deg);
+    width: 85px;
+    height: 85px;
+    margin: 10px;
+    background-color: var(--red);
+}
+
+.love.go .top .zero:nth-child(2) {
+    z-index: 2;
+    --red: #FF4545;
+}
+
+.love.go .top .zero:nth-child(3) {
+    z-index: 1;
+    --red: #FF8484;
+}
+
+.love.go .top .zero:nth-child(4) {
+    z-index: 0;
+    --red: #FFAEAE;
+}
+
+.love.go .top .zero:before,
+.love.go .top .zero:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: var(--red);
+    content: '';
+}
+
+.love.go .top .zero:before {
+    top: -50%;
+}
+
+.love.go .top .zero:after {
+    left: -50%;
+}
+
+.love.go .message>* {
+    text-align: center;
+    font-family: 'NanumSquareRound';
+    position: relative;
+    opacity: 0;
+    font-size: 1.5rem;
+    animation: show-opacity 1s ease-out forwards;
+}
+.love.go .message .big {
+    font-family: 'hj';
+    color: transparent;
+    background: linear-gradient(#fc8383, rgb(89, 155, 241));
+    background-clip: text;
+}
+.love.go .message>*:nth-child(1),
+.love.go .message>*:nth-child(1):before,
+.love.go .message>*:nth-child(1):after {
+    animation-delay: 1.75s;
+}
+
+.love.go .message>*:nth-child(2),
+.love.go .message>*:nth-child(2):before,
+.love.go .message>*:nth-child(2):after {
+    animation-delay: 2s;
+}
+
+.love.go .message>*:nth-child(3),
+.love.go .message>*:nth-child(3):before,
+.love.go .message>*:nth-child(3):after {
+    animation-delay: 2.25s;
+}
+
+.love.go .message>*:nth-child(4),
+.love.go .message>*:nth-child(4):before,
+.love.go .message>*:nth-child(4):after {
+    animation-delay: 2.5s;
+}
+
+.love.go .message .big {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+@keyframes show {
+    0%,
+    50% {
+        top: 20px;
+        background-color: #ffffff;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes show-color {
+
+    0%,
+    50% {
+        background-color: #ffffff;
+    }
+}
+
+@keyframes show-opacity {
+    0% {
+        top: 20px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.content {
+    font-family: 'NanumSquareRound';
+    width: 70%;
+    text-align: center;
+    margin: 50px auto;
+    font-size: 1.3rem;
+}
+.content img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+a {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    text-decoration: none;
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'hj';
+    color: #ff9fac;
+    mix-blend-mode: difference;
+    transition: all 0.3s;
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1000px) {
+    .love {
+        flex-direction: column;
+        width: 55%;
+    }
+    .love.go .top {
+        justify-content: center;
+        transform: scale(0.7);
+    }
+    .love.go .message .big{
+        font-size: 3rem;
+    }
+    .content {
+        font-size: 1rem;
+    }
+    p {
+        margin: 3px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .love.go .top {
+        justify-content: center;
+        transform: scale(0.5);
+        position: absolute;
+        left: 6%;
+        top: 9%;
+    }
+    .love.go .message .big{
+        font-size: 2rem;
+    }
+    .content {
+        margin: 10px auto 30px;
+        font-size: 0.9rem;
+    }
+}
